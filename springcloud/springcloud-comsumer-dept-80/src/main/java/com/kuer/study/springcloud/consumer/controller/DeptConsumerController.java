@@ -21,7 +21,12 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001/";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001/";
+
+    /**
+     * Ribbon 这里的地址通过服务名访问
+     */
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT/";
 
     /**
      * 消费者不应该又service层
