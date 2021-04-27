@@ -9,42 +9,66 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <packaging>jar</packaging>
-    <artifactId>springcloud-comsumer-dept-feign-81</artifactId>
+    <artifactId>springcloud-provider-dept-hystrix-8001</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
+        <!--引入api module-->
         <dependency>
             <groupId>com.kuer.study</groupId>
             <artifactId>springcloud-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+        </dependency>
+        <!--jetty-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
         <!--Eureka依赖-->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>3.0.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>3.0.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
+        <!--完善Eureka的监控信息-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--服务降级hystrix-->
+        <!--hystrix-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

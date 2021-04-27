@@ -1,6 +1,7 @@
 package com.kuer.study.springcloud.consumer.controller;
 
 
+import com.kuer.study.springcloud.consumer.service.DeptClientServiceFallbackFactoryImpl;
 import com.kuer.study.springcloud.consumer.service.IDeptService;
 import com.kuer.study.springcloud.pojo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;

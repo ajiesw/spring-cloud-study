@@ -25,8 +25,7 @@ eureka:
     hostname: localhost
     # 修改Eureka默认描述信息
     instance-id: springcloud-provider-dept-8001
-    # 显示服务ip地址
-    prefer-ip-address: true
+  #    prefer-ip-address: true
   client:
     # 服务注册地址
     service-url:
