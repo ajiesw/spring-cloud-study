@@ -1,7 +1,5 @@
 server:
   port: 3344
-
-
 spring:
   application:
     name: springcloud-config-server
@@ -11,3 +9,9 @@ spring:
       server:
         git:
           uri: https://github.com/ajiesw/spring-cloud-study.git
+          default-label: main
+          skip-ssl-validation: true
+          username: ****
+          password: ****
+      # 读取分支
+      label: main
